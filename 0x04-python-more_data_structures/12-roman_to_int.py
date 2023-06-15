@@ -19,7 +19,6 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         if romanSwitch.get(roman_string[i], 0) == 0:
             return (0)
-
         if (i != (len(roman_string) - 1) and
                 romanSwitch[roman_string[i]] < romanSwitch[roman_string[i + 1]]):
                 num += romanSwitch[roman_string[i]] * -1
