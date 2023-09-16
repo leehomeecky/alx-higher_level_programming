@@ -10,5 +10,3 @@ if __name__ == "__main__":
     c.execute("SELECT * FROM states")
     for rowVAl in c.fetchall():
         print(rowVAl)
-    c.close()
-    db.close()
