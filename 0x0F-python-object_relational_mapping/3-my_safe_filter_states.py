@@ -9,6 +9,6 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s "
                 "ORDER BY states.id",
-                (value, ))
+                (sys.argv[4], ))
     for rowVal in cur.fetchall():
         print(rowVal)
