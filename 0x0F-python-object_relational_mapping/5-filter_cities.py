@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" script that takes name of a state as an argument and lists all cities """
+""" script that takes name of a state and lists all cities """
+
 import sys
 import MySQLdb
 
