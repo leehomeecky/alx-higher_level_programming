@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a script that takes in the name of a state as an argument and lists all cities """
+""" script that takes in the name of a state as an argument and lists all cities """
 import sys
 import MySQLdb
 
@@ -11,5 +11,5 @@ if __name__ == "__main__":
                 "FROM cities WHERE cities.state_id = "
                 "(SELECT id FROM states WHERE name LIKE BINARY %s)"
                 " ORDER BY cities.id", (sys.argv[4], ))
-    result = [rowVal[0] for rowVal in cur.fetchall()]
+    result = list(rowVal[0] for rowVal in cur.fetchall())
     print(*result, sep=", ")
